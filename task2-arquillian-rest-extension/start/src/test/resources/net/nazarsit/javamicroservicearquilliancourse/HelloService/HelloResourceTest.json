@@ -1,0 +1,7 @@
+{
+  "greetings":
+  [
+    {"greeting":"Hallå","greetingLanguage":"sv"},
+    {"greeting":"Hello","greetingLanguage":"en"}
+  ]
+}
