@@ -1,8 +1,9 @@
 package net.nazarsit.javamicroservicearquilliancourse;
 
-
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 
+@ApplicationScoped
 public class SimpleService {
 
     @Inject

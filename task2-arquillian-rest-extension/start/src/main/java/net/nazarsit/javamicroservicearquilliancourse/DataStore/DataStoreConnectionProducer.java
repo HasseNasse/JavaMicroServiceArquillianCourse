@@ -14,7 +14,6 @@ public class DataStoreConnectionProducer {
     private MongoClient mongoClient;
 
     private static final Config config = ConfigProvider.getConfig();
-    private static final String DB_NAME = "greetingsStore";
 
     @Produces
     public MongoDatabase createMongoClient(){
