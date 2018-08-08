@@ -1,4 +1,4 @@
-package net.nazarsit.javamicroservicearquilliancourse.HelloService;
+package component.arquilliancourse.helloservice;
 
 import javax.json.bind.JsonbBuilder;
 

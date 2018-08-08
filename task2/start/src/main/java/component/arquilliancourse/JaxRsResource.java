@@ -1,4 +1,4 @@
-package net.nazarsit.javamicroservicearquilliancourse;
+package component.arquilliancourse;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

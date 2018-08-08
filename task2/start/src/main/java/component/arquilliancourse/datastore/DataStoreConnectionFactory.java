@@ -1,4 +1,4 @@
-package net.nazarsit.javamicroservicearquilliancourse.DataStore;
+package component.arquilliancourse.datastore;
 
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoDatabase;

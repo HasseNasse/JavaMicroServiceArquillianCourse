@@ -1,4 +1,4 @@
-package net.nazarsit.javamicroservicearquilliancourse.HelloService;
+package component.arquilliancourse.helloservice;
 
 import jdk.nashorn.internal.runtime.regexp.joni.exception.ValueException;
 

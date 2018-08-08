@@ -1,9 +1,9 @@
-package net.nazarsit.javamicroservicearquilliancourse.HelloService;
+package component.arquilliancourse.helloservice;
 
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
-import net.nazarsit.javamicroservicearquilliancourse.DataStore.DAO;
+import component.arquilliancourse.datastore.DAO;
 import org.bson.Document;
 
 import javax.enterprise.context.ApplicationScoped;

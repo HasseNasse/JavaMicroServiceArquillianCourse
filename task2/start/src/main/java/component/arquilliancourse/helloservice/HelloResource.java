@@ -1,10 +1,8 @@
-package net.nazarsit.javamicroservicearquilliancourse.HelloService;
+package component.arquilliancourse.helloservice;
 
 import jdk.nashorn.internal.runtime.regexp.joni.exception.ValueException;
 
 import javax.inject.Inject;
-import javax.inject.Singleton;
-import javax.print.attribute.standard.Media;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
@@ -14,10 +12,10 @@ import java.util.NoSuchElementException;
 public class HelloResource {
 
     @Inject
-    private GreetingDAO greetingDAO;
+    GreetingDAO greetingDAO;
 
     @Inject
-    private GreetingService greetingService;
+    GreetingService greetingService;
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
