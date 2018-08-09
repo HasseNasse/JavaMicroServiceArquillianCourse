@@ -14,13 +14,17 @@ import org.junit.*;
 import org.junit.runner.RunWith;
 
 import javax.inject.Inject;
-import javax.json.bind.Jsonb;
-import javax.json.bind.JsonbBuilder;
 import java.net.URL;
+import java.util.Locale;
 
 import static com.lordofthejars.nosqlunit.mongodb.InMemoryMongoDb.InMemoryMongoRuleBuilder.newInMemoryMongoDbRule;
 import static com.lordofthejars.nosqlunit.mongodb.MongoDbRule.MongoDbRuleBuilder.newMongoDbRule;
 import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.post;
+import static io.restassured.RestAssured.when;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.hasItems;
+import static org.hamcrest.CoreMatchers.is;
 
 @RunWith( Arquillian.class )
 public class HelloResourceTest extends AbstractTest{
@@ -30,8 +34,6 @@ public class HelloResourceTest extends AbstractTest{
 
     @Rule
     public MongoDbRule mongoDbRule = newMongoDbRule().defaultEmbeddedMongoDb("test");
-
-    private static Jsonb jsonb = JsonbBuilder.newBuilder().build();
 
     @Deployment
     public static WebArchive createDeployment () {
@@ -64,20 +66,6 @@ public class HelloResourceTest extends AbstractTest{
 
     }
 
-    //    GET All Greetings
-    @Test
-    @InSequence(2)
-    public void shouldReturnJsonRepresentationOfMockedGreetings() throws Exception {
-        // GIVEN
-
-
-        // WHEN + THEN
-        given()
-            .when().get(deploymentURL + "rest/greetings").prettyPrint();
-
-    }
-
-
     //    POST a greeting
     @Test
     @InSequence(1)
@@ -89,17 +77,31 @@ public class HelloResourceTest extends AbstractTest{
 
         // WHEN + THEN
         given()
-            .contentType( "application/json" )
-            .body( greetingJson )
+                .contentType( "application/json" )
+                .body( greetingJson )
+                .when()
+                .post(deploymentURL + "rest/greetings" )
+                .then()
+                .statusCode( 200 );
+    }
+
+    //    GET All Greetings
+    @Test
+    @InSequence(2)
+    public void shouldReturnJsonRepresentationOfMockedGreeting() throws Exception {
+        // GIVEN+WHEN+THEN
+        given()
         .when()
-            .post(deploymentURL + "rest/greetings" )
+            .get( deploymentURL + "rest/greetings" )
         .then()
-            .statusCode( 200 );
+            .contentType( "application/json" )
+            .statusCode( 200 )
+            .body( "greeting", hasItems( "salam" ));
     }
 
     @Test
     @InSequence(3)
-    public void shouldReturnForbiddenIfGreetingAlreadyExistsInDataStore(){
+    public void shouldReturnForbiddenIfGreetingIDAlreadyExistsInDataStore(){
 
         // GIVEN
         Greeting greeting = new Greeting( "Salam", "ur" );
@@ -113,6 +115,25 @@ public class HelloResourceTest extends AbstractTest{
                 .post(deploymentURL + "rest/greetings" )
         .then()
                 .statusCode( 400 );
+    }
+
+    @Test
+    public void shouldReturnGreetingGivenAGreetingLanguage(){
+        //GIVEN
+
+
+        //WHEN
+        given()
+            .contentType( "application/json" )
+            .queryParam( "locale", "en" )
+        .when()
+            .get(deploymentURL + "rest/greetings")
+        .then()
+            .statusCode( 404 );
+
+        //THEN
+
+
     }
 
     //    PUT a greeting

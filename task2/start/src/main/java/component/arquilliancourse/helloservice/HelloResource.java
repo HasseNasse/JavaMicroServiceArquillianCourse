@@ -35,17 +35,6 @@ public class HelloResource {
         }
     }
 
-    @GET
-    @Produces( MediaType.APPLICATION_JSON )
-    public Response getGreetingByLanguage( @QueryParam( "locale" ) String locale ){
-        try {
-            return Response.ok( greetingDAO.findByLanguage( locale.toLowerCase() ), MediaType.APPLICATION_JSON ).build();
-        }catch ( NoSuchElementException ex ){
-            ex.printStackTrace();
-            return Response.status( 404 ).build();
-        }
-    }
-
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)

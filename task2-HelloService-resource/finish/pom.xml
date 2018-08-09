@@ -154,13 +154,6 @@
         </dependency>
 
         <dependency>
-            <groupId>org.arquillian.universe</groupId>
-            <artifactId>arquillian-ape-nosql-mongodb</artifactId>
-            <type>pom</type>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
             <groupId>io.openliberty.arquillian</groupId>
             <artifactId>arquillian-liberty-managed</artifactId>
             <version>1.0.1</version>

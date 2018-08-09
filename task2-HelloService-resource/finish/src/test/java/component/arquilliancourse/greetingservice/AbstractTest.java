@@ -1,4 +1,4 @@
-package component.arquilliancourse.helloservice;
+package component.arquilliancourse.greetingservice;
 
 import component.arquilliancourse.JaxRsResource;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
@@ -22,7 +22,7 @@ public class AbstractTest {
 
         return ShrinkWrap.create( WebArchive.class )
                 .addClasses(
-                    JaxRsResource.class
+                        JaxRsResource.class
                 )
                 .addAsLibraries( Maven.resolver().resolve(jsonbApi).withTransitivity().asFile() )
                 .addAsLibraries( Maven.resolver().resolve(yasson).withTransitivity().asFile() )
