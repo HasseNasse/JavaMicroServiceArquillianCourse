@@ -1,10 +1,13 @@
 package component.arquilliancourse.helloservice;
 
+import com.lordofthejars.nosqlunit.annotation.UsingDataSet;
 import com.lordofthejars.nosqlunit.mongodb.InMemoryMongoDb;
 import com.lordofthejars.nosqlunit.mongodb.MongoDbRule;
 import component.arquilliancourse.datastore.DAO;
 import component.arquilliancourse.datastore.DataStoreConnectionFactory;
 import component.arquilliancourse.datastore.FakeDataStoreConnectionFactory;
+import java.util.List;
+import org.assertj.core.api.Assertions;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.arquillian.junit.InSequence;
@@ -22,6 +25,8 @@ import static com.lordofthejars.nosqlunit.mongodb.MongoDbRule.MongoDbRuleBuilder
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.post;
 import static io.restassured.RestAssured.when;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.from;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.hasItems;
 import static org.hamcrest.CoreMatchers.is;
@@ -40,30 +45,29 @@ public class HelloResourceTest extends AbstractTest{
 
         WebArchive war = createBasicDeployment()
                 .addClasses(
-                    HelloResource.class,
                     GreetingDAO.class,
-                    GreetingService.class,
                     Greeting.class,
                     DAO.class,
-                    DataStoreConnectionFactory.class,
                     FakeDataStoreConnectionFactory.class
                 )
-                .addClass( AbstractTest.class );
+                .addClass( AbstractTest.class )
+                .addAsResource(
+                    HelloResourceTest.class.getResource("HelloResourceTest.json"),
+                    HelloResourceTest.class.getPackage().getName().replace(".", "/") + "/HelloResourceTest.json"
+                );
         System.out.println( war.toString(true) );
         return war;
     }
 
-    @ArquillianResource
-    private URL deploymentURL;
-
     @Inject
     FakeDataStoreConnectionFactory fakeDataStoreConnectionFactory;
 
+    @Inject
+    GreetingDAO greetingDAO;
 
     @Before
     public void setupTest(){
         fakeDataStoreConnectionFactory.setMongoDatabase( mongoDbRule.getDatabaseOperation().connectionManager().getDatabase( "test" ) );
-
     }
 
     //    POST a greeting
@@ -71,35 +75,42 @@ public class HelloResourceTest extends AbstractTest{
     @InSequence(1)
     public void shouldInsertGreetingToFongoDS(){
 
-        // GIVEN
-        Greeting greeting = new Greeting( "Salam", "ar" );
-        String greetingJson = greeting.toJson();
+        // Given
+        final Greeting greeting = new Greeting( "Salam", "ar" );
 
-        // WHEN + THEN
-        given()
-                .contentType( "application/json" )
-                .body( greetingJson )
-                .when()
-                .post(deploymentURL + "rest/greetings" )
-                .then()
-                .statusCode( 200 );
+        // When
+        final boolean isInserted = greetingDAO.insert(greeting);
+
+        // Then
+
+        assertThat(isInserted).isEqualTo(true);
+        final List<Greeting> all = greetingDAO.findAll();
+        assertThat(all)
+            .hasSize(1)
+            .containsExactly(greeting);
     }
 
     //    GET All Greetings
     @Test
+    @UsingDataSet(locations = "HelloResourceTest.json")
     @InSequence(2)
     public void shouldReturnJsonRepresentationOfMockedGreeting() throws Exception {
-        // GIVEN+WHEN+THEN
-        given()
-        .when()
-            .get( deploymentURL + "rest/greetings" )
-        .then()
-            .contentType( "application/json" )
-            .statusCode( 200 )
-            .body( "greeting", hasItems( "salam" ));
+
+        // Given
+        final Greeting en = new Greeting("hello", "en");
+        final Greeting ar= new Greeting("salam", "ar");
+        final Greeting sv = new Greeting("hej", "sv");
+
+        // When
+        final List<Greeting> all = greetingDAO.findAll();
+
+        // Then
+        assertThat(all)
+            .hasSize(3)
+            .containsExactlyInAnyOrder(en, ar, sv);
     }
 
-    @Test
+    /**@Test
     @InSequence(3)
     public void shouldReturnForbiddenIfGreetingIDAlreadyExistsInDataStore(){
 
@@ -137,6 +148,6 @@ public class HelloResourceTest extends AbstractTest{
     }
 
     //    PUT a greeting
-
+    **/
 
 }
