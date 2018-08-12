@@ -1,0 +1,16 @@
+{
+  "greetings": [
+    {
+      "greeting":"hello",
+      "greetingLanguage":"en"
+    },
+    {
+      "greeting":"hej",
+      "greetingLanguage":"sv"
+    },
+    {
+      "greeting":"salam",
+      "greetingLanguage":"ar"
+    }
+  ]
+}
