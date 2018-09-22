@@ -1,0 +1,27 @@
+#Thu Sep 06 03:39:38 BST 2018
+lib/com.ibm.ws.event_1.0.22.jar=d66c6daa2c22de72b937f8efd3f42eb7
+lib/com.ibm.ws.org.eclipse.equinox.region_1.0.22.jar=b5ae2a0a13549159a14a7dd83ccf2ffe
+lib/com.ibm.ws.org.jboss.jandex_1.0.22.jar=46b116228cd861c56b8b7917a486eef8
+lib/com.ibm.ws.org.apache.aries.jmx.api_1.0.22.jar=c35ba03cb7f3dac8980f854656648dd1
+lib/com.ibm.ws.config.ext_1.0.22.jar=74ba26743f5027a870bf57265b575e76
+lib/com.ibm.ws.jmx_1.0.22.jar=c4efbdd24fe31ffa0932269ba58e6133
+lib/com.ibm.ws.kernel.service.location_1.1.22.jar=eee40b868aebe28c6ed5f6b9d1f6184d
+lib/com.ibm.ws.diagnostics_1.0.22.jar=984bc1b6269d5e15b24efba6c01415b1
+lib/com.ibm.ws.kernel.service_1.3.22.jar=b747288e15f09da2066f8fe4c195b804
+lib/com.ibm.ws.org.apache.felix.scr_1.0.22.jar=855a20be1310e45632e1770c0ca68937
+lib/org.eclipse.osgi_3.12.100.jar=4fa64e5bcecd0287a4a8a5d761ec3842
+lib/com.ibm.ws.org.apache.aries.jmx.core.whiteboard_1.0.22.jar=10ce2c3dd2161c90d0dda0526db09e4d
+lib/com.ibm.ws.config_1.0.22.jar=02927f07cd97fd88f0874f5fbb811dbb
+lib/com.ibm.ws.runtime.update_1.0.22.jar=ce9a2798d6ea7d77a001fc811a86d653
+lib/com.ibm.ws.kernel.equinox.module_1.0.22.jar=793e99d62366dac82f8f5c3e7f8738d3
+lib/com.ibm.ws.threading_1.1.22.jar=aad2618990cbc8644bba278c8d5d1e4d
+lib/com.ibm.ws.org.apache.aries.util_1.0.22.jar=ecd169d0745f5c253a2d4ec452019439
+lib/platform/kernelCore-1.0.mf=5a5c1c7361096deeefcc0eaa38b985ef
+lib/com.ibm.ws.crypto.passwordutil_1.0.22.jar=12724389efa3b52f95353d8bd33ee7a1
+lib/com.ibm.ws.org.objectweb.asm_1.0.22.jar=2248c52aaa43e52e9c82ca9a3b3a0773
+lib/com.ibm.ws.org.eclipse.equinox.metatype_1.0.22.jar=d1a36d2dfe0ca850c990268ec4b96be8
+lib/com.ibm.ws.kernel.filemonitor_1.0.22.jar=3566c2be8d7985c8af1855a7382daaa8
+lib/com.ibm.ws.kernel.feature_1.0.22.jar=c8b7644b1b3d1ccfdd0b3ea334401cfd
+lib/com.ibm.ws.cds.3.0.1_1.0.22.jar=365004828681ace3af22563f583ad943
+lib/com.ibm.ws.kernel.metatype.helper_1.0.22.jar=0787c3fd3512510073ee23255fb35d17
+lib/com.ibm.ws.org.eclipse.equinox.coordinator_1.0.22.jar=210035a6c74a51a14894f1b42209938a

@@ -1,0 +1,6 @@
+component/arquilliancourse/JaxRsResource.class
+component/arquilliancourse/helloservice/Greeting.class
+component/arquilliancourse/helloservice/GreetingDAO.class
+component/arquilliancourse/datastore/DataStoreConnectionFactory.class
+component/arquilliancourse/datastore/DAO.class
+component/arquilliancourse/helloservice/GreetingResource.class

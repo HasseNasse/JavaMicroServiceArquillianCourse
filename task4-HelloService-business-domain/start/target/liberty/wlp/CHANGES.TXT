@@ -1,0 +1,62 @@
+PH00401 Potential man-in-the-middle attack in WebSphere Application Server Liberty for JAXWS(CVE-2018-8039)
+PH00435 Collective controller logs NoSuchElementException from LivenessMontiorV2
+PH00448 A CWWKE0702E message is printed when the webCache-1.0 feature is enabled
+PH00566 Member should fail over after continuous 2 minutes sendHeartBeat failure.
+PH00730 The unnecessary information should not be generated in repository dump file.
+PH00735 Null Pointer Exception when HTTP or HTTPS ports blank in server.xml
+PH00881 SCIM does not return paged results for requests that don't include the 'count' parameter.
+PH00926 Collective repository dump should include non-sensitive host and jmx auth information to help diagnose issues.
+PH01179 DUPLICATE ENTRIES OF THE BBGZSCFM MODULE LISTED IN LPAMAP
+PH01221 Security Vulnerability CVE-2018-8039
+PH01295 Information disclosure in WebSphere Application Server Liberty (CVE-2018-1755)
+PH01499 APAR for OLGH4402
+PH01668 SCIM incorrectly returns 500 on MaxSearchResultsExceeded
+PH01863 SCIM updates to users can result in attributes being marked for deletion that were not designated for deletion by the request.
+PH02256 File access exceptions when running a Java Batch application with syncToOSThread enabled
+PI95405 LIBERTY MAY NOT FIND KEY IN JWK BY X5T
+PI96910 ICH ERROR MESSAGES ARE NOT ISSUED DURING LIBERTY STARTUP WHEN CHECKING FOR ACCESS TO BBG.SECPFX.* AND APPL PROFILES
+PI97659 DISPLAY MEMLIMIT VALUE AND SOURCE AS WELL AS REGION INFO IN LIBERTY LOG AT STARTUP
+PI97676 MESSAGE CWWKS1100A MAY BE MISLEADING.
+PI98758 SETTING ENABLEFAILOVER TO FALSE FOR THE SAFREGISTRY CAN PRODUCE MISLEADING MESSAGES IF AUTHORIZED SERVICES ARE NOT AVAILABLE.
+PI99176 Information disclosure in WebSphere Application Server Liberty (CVE-2018-1683)
+PI99257 REQUESTS TO SCIM TO RETRIEVE A RESOURCE BY ID THAT DON'T INCLUDE AN ID RESULT IN AN 500 HTTP STATUS CODE
+PI99285 User login fails when configuring zOS mapDistributedIdentities
+PI99317 REQUEST TO SCIM "GROUPS/{ID}" ENDPOINT SPECIFYING "MEMBERS" ATTRIBUTE DOESN'T RETURN THE GROUP MEMBERS
+PI99411 THE LIBERTY MESSAGE LOG DD IS NOT CONFIGURABLE
+PI99600 AccessControlException thrown when connecting to Health Center with Java 2 Security enabled
+OLGH2489 Global error when there are no registries available (Ldap,etc) for VMMService
+OLGH2659 Capture security context from Java Batch thread when syncToOSThread is enabled
+OLGH3422 Check for override of default configuration and ignore
+OLGH3489 MP Rest Client does not use Liberty SSL config when making outbound requests
+OLGH3522 Update Xalan library
+OLGH3853 basicRegistry-1.0's 'ignoreCaseForAuthentication' attribute does not apply to getUsers(...) method
+OLGH3952 Add global error when user registry is not found
+OLGH4002 Incorrect CWWKZ0022W messages printed with VirtualHost Usage
+OLGH4016 Quiesce should not be blocked by application start
+OLGH4028 Liberty 18.0.0.1 startup issues with Arabic locale
+OLGH4044 Server failure prior to framework startup can leave JVM running
+OLGH4158 Need to squelch "Could not obtain lock" errors appropriately
+OLGH4186 Need to improve config dropins processing
+OLGH4203 In 18.0.0.2 an IllegalArgumentException can occur when "maxParamPerRequest="-1"
+OLGH4211 Java 2 security issue in org.apache.cxf.transport.https.HttpsURLConnectionFactory
+OLGH4244 Add global error when user registry is not found
+OLGH4272 When a thread is interrupted waiting for a connection from the connection manager, maximum connections will be decremented.
+OLGH4275 NPE in JAXRS client when OpenTracing is included
+OLGH4341 PageControl's 'startIndex' is not honored when 'size' is greater than results
+OLGH4345 Add doPrivileged code for InetAddress related activity in messaging
+OLGH4346 Add doPrivileged code for InetAddress related activity in IIOP
+OLGH4368 ConcurrentModificationException when a JAXRS API has multiple consume and/or produce MediaTypes
+OLGH4392 Fix server hang issue when bootstrap.properties variable is incorrectly specified
+OLGH4402 Format problem with logs when traceFilename=stdout and traceFormat=ENHANCED / BASIC
+OLGH4462 NonPersistent EJB Timer Dying if Timeout Throws Exception on Last Retry
+OLGH4465 RejectedExecutionException: Trigger.getNextRunTime: null creating EJB timer
+OLGH4505 SSL Closing handshake improvement
+OLGH4521 Install kernel does not throw exception if already installed features are specified again with a different capitalization
+OLGH4530 Install kernel map installs features without wlp/bin and wlp/dev contents
+OLGH4531 ManagedScheduledExecutor tries to run tasks during server shutdown
+OLGH4550 Injection race condition in JAX-RS during startup
+OLGH4609 Maven features should provide transitive dependencies for stable api, third-party api
+OLGH4619 PersonAccount's and Group's get(String), isSet(String), and unset(String) methods may throw NullPointerExceptions
+OLGH4666 Correct getServletPath for default mapping
+OLGH4712 release bug: mpjwt JsonWebToken.getAudience() return type noncompliant with spec when no audiences present.
+OLGH4717 Update Yoko to favour CSI endpoints

@@ -1,0 +1,153 @@
+********************************************************************************
+product = WebSphere Application Server 18.0.0.3 (wlp-1.0.22.cl180320180905-2337)
+wlp.install.dir = /Users/hassenasse/dev/local/workspace/JavaMicroServiceArquillianCourse/task3-HelloService-persistance/finish/target/liberty/wlp/
+java.home = /Library/Java/JavaVirtualMachines/jdk1.8.0_152.jdk/Contents/Home/jre
+java.version = 1.8.0_152
+java.runtime = Java(TM) SE Runtime Environment (1.8.0_152-b16)
+os = Mac OS X (10.13.6; x86_64) (en_GB)
+process = 45143@Hassans-MBP.lan
+********************************************************************************
+[9/22/18 19:56:50:673 CEST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server defaultServer has been launched.
+[9/22/18 19:56:50:692 CEST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0100I: This product is licensed for development, and limited production use. The full license terms can be viewed here: https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/license/base_ilan/ilan/18.0.0.3/lafiles/en.html
+[9/22/18 19:56:52:152 CEST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: The kernel started after 1.744 seconds
+[9/22/18 19:56:52:223 CEST] 00000019 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: Feature update started.
+[9/22/18 19:56:53:771 CEST] 00000012 com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0007I: The security service is starting...
+[9/22/18 19:56:53:839 CEST] 00000012 m.ibm.ws.jaxrs.2.0.common:1.0.22.cl180320180905-2337(id=84)] I Aries Blueprint packages not available. So namespaces will not be registered
+[9/22/18 19:56:54:543 CEST] 00000021 com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0219I: TCP Channel defaultHttpEndpoint has been started and is now listening for requests on host *  (IPv6) port 9080.
+[9/22/18 19:56:54:601 CEST] 00000012 com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Monitoring dropins for applications.
+[9/22/18 19:56:55:388 CEST] 00000012 com.ibm.ws.cache.ServerCache                                 I DYNA1001I: WebSphere Dynamic Cache instance named baseCache initialized successfully.
+[9/22/18 19:56:55:391 CEST] 00000012 com.ibm.ws.cache.ServerCache                                 I DYNA1071I: The cache provider default is being used.
+[9/22/18 19:56:55:392 CEST] 00000012 com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: Dynamic Cache (object cache) initialized successfully.
+[9/22/18 19:56:55:676 CEST] 0000001e com.ibm.ws.security.token.ltpa.internal.LTPAKeyInfoManager   I CWWKS4103I: Creating the LTPA keys. This may take a few seconds.
+[9/22/18 19:56:55:675 CEST] 00000014 com.ibm.ws.ssl.config.WSKeyStore                             I CWPKI0802I: Creating the SSL certificate. This may take a few seconds.
+[9/22/18 19:56:55:729 CEST] 00000012 ibm.ws.security.authentication.internal.jaas.JAASServiceImpl I CWWKS1123I: The collective authentication plugin with class name NullCollectiveAuthenticationPlugin has been activated. 
+[9/22/18 19:56:56:187 CEST] 00000012 com.ibm.ws.security.jwt.internal.ConsumerImpl                I CWWKS6012I: The JSON Web Token (JWT) consumer service is available.
+[9/22/18 19:56:56:284 CEST] 00000012 com.ibm.ws.security.jwt.web.JwtEndpointServices              I CWWKS6002I: The JSON Web Token (JWT) endpoint service is available.
+[9/22/18 19:56:56:331 CEST] 00000012 com.ibm.ws.security.mp.jwt.impl.MicroProfileJwtConfigImpl    I CWWKS5500I: The MicroProfile JWT configuration [defaultMpJwt] was successfully processed.
+[9/22/18 19:56:56:334 CEST] 00000012 com.ibm.ws.security.mp.jwt.impl.MicroProfileJwtServiceImpl   I CWWKS5500I: The MicroProfile JWT configuration [MicroProfileJwtService] was successfully processed.
+[9/22/18 19:56:56:564 CEST] 00000012 com.ibm.ws.session.WASSessionCore                            I SESN8501I: The session manager did not find a persistent storage location; HttpSession objects will be stored in the local application server's memory.
+[9/22/18 19:56:57:092 CEST] 00000014 com.ibm.ws.ssl.config.WSKeyStore                             A CWPKI0803A: SSL certificate created in 1.416 seconds. SSL key file: /Users/hassenasse/dev/local/workspace/JavaMicroServiceArquillianCourse/task3-HelloService-persistance/finish/target/liberty/wlp/usr/servers/defaultServer/resources/security/keystore.jceks
+[9/22/18 19:56:57:216 CEST] 0000001b com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0219I: TCP Channel defaultHttpEndpoint-ssl has been started and is now listening for requests on host *  (IPv6) port 9443.
+[9/22/18 19:56:57:783 CEST] 0000001e com.ibm.ws.security.token.ltpa.internal.LTPAKeyInfoManager   A CWWKS4104A: LTPA keys created in 2.107 seconds. LTPA key file: /Users/hassenasse/dev/local/workspace/JavaMicroServiceArquillianCourse/task3-HelloService-persistance/finish/target/liberty/wlp/usr/servers/defaultServer/resources/security/ltpa.keys
+[9/22/18 19:56:57:804 CEST] 00000019 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: The server installed the following features: [mpFaultTolerance-1.0, servlet-3.1, microProfile-1.3, ssl-1.0, jndi-1.0, mpHealth-1.0, localConnector-1.0, appSecurity-2.0, jsonp-1.0, jaxrs-2.0, mpConfig-1.2, jaxrsClient-2.0, concurrent-1.0, jwt-1.0, mpRestClient-1.0, mpMetrics-1.1, opentracing-1.0, mpOpenTracing-1.0, mpJwt-1.0, json-1.0, mpOpenAPI-1.0, cdi-1.2, distributedMap-1.0].
+[9/22/18 19:56:57:805 CEST] 00000019 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: Feature update completed in 5.655 seconds.
+[9/22/18 19:56:57:806 CEST] 00000019 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: The server defaultServer is ready to run a smarter planet.
+[9/22/18 19:56:57:903 CEST] 0000001e com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0008I: The security service is ready.
+[9/22/18 19:56:57:904 CEST] 0000001e com.ibm.ws.security.token.ltpa.internal.LTPAKeyCreateTask    I CWWKS4105I: LTPA configuration is ready after 2.232 seconds.
+[9/22/18 19:56:58:276 CEST] 0000001c com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: PrivateMicroProfileMetrics.
+[9/22/18 19:56:58:276 CEST] 00000029 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: com.ibm.ws.security.jwt.
+[9/22/18 19:56:58:276 CEST] 00000025 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: OpenAPIUI.
+[9/22/18 19:56:58:280 CEST] 0000001c com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module PrivateMicroProfileMetrics has been bound to default_host.
+[9/22/18 19:56:58:281 CEST] 00000025 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module OpenAPIUI has been bound to default_host.
+[9/22/18 19:56:58:277 CEST] 00000019 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: health.
+[9/22/18 19:56:58:282 CEST] 00000019 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module health has been bound to default_host.
+[9/22/18 19:56:58:276 CEST] 0000001b com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: ibm/api.
+[9/22/18 19:56:58:283 CEST] 0000001b com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module ibm/api has been bound to default_host.
+[9/22/18 19:56:58:283 CEST] 0000001c com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://hassans-mbp.lan:9080/metrics/
+[9/22/18 19:56:58:286 CEST] 0000001b com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://hassans-mbp.lan:9080/ibm/api/
+[9/22/18 19:56:58:286 CEST] 00000019 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://hassans-mbp.lan:9080/health/
+[9/22/18 19:56:58:280 CEST] 00000029 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module com.ibm.ws.security.jwt has been bound to default_host.
+[9/22/18 19:56:58:286 CEST] 00000025 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://hassans-mbp.lan:9080/openapi/ui/
+[9/22/18 19:56:58:288 CEST] 00000029 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://hassans-mbp.lan:9080/jwt/
+[9/22/18 19:56:58:360 CEST] 00000019 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/health
+[9/22/18 19:56:58:361 CEST] 0000001b com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/ibm/api
+[9/22/18 19:56:58:362 CEST] 0000001c com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/metrics
+[9/22/18 19:56:58:362 CEST] 00000025 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/openapi/ui
+[9/22/18 19:56:58:362 CEST] 00000029 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/jwt
+[9/22/18 19:56:58:381 CEST] 00000019 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[9/22/18 19:56:58:400 CEST] 00000029 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[9/22/18 19:56:58:403 CEST] 0000001c com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[9/22/18 19:56:58:404 CEST] 00000025 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[9/22/18 19:56:58:405 CEST] 0000001b com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[9/22/18 19:56:58:433 CEST] 00000025 com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: Dynamic Cache (object cache) initialized successfully.
+[9/22/18 19:56:58:446 CEST] 00000021 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: MicroProfileOpenAPI.
+[9/22/18 19:56:58:446 CEST] 00000021 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module MicroProfileOpenAPI has been bound to default_host.
+[9/22/18 19:56:58:447 CEST] 00000021 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://hassans-mbp.lan:9080/openapi/
+[9/22/18 19:56:58:494 CEST] 00000021 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/openapi
+[9/22/18 19:56:58:497 CEST] 00000021 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[9/22/18 19:56:58:533 CEST] 0000001c com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [com.ibm.ws.microprofile.metrics.private] [/metrics] [PrivateMetricsRESTProxyServlet]: Initialization successful.
+[9/22/18 19:56:58:535 CEST] 00000021 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [com.ibm.ws.microprofile.openapi] [/openapi] [OpenAPIServlet]: Initialization successful.
+[9/22/18 19:57:00:205 CEST] 0000001d com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application c034216e-dc48-42b0-b245-95a8140c0753.
+[9/22/18 19:57:03:998 CEST] 0000001d com.ibm.ws.microprofile.openapi.ApplicationProcessor         E CWWKO1650E: Validation of the OpenAPI document produced the following error(s): 
+                                                                                                               
+ - Message: Required "paths" field is missing or is set to an invalid value, Location: #
+
+[9/22/18 19:57:03:999 CEST] 0000001d com.ibm.ws.microprofile.openapi.ApplicationProcessor         I CWWKO1660I: The application c034216e-dc48-42b0-b245-95a8140c0753 was processed and an OpenAPI document was produced.
+[9/22/18 19:57:04:057 CEST] 0000001d org.jboss.weld.Version                                       I WELD-000900: 2.4.7 (Final)
+[9/22/18 19:57:07:688 CEST] 0000001d com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: c034216e-dc48-42b0-b245-95a8140c0753.
+[9/22/18 19:57:07:688 CEST] 0000001d com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module c034216e-dc48-42b0-b245-95a8140c0753 has been bound to default_host.
+[9/22/18 19:57:07:689 CEST] 0000001d com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://hassans-mbp.lan:9080/c034216e-dc48-42b0-b245-95a8140c0753/
+[9/22/18 19:57:07:692 CEST] 00000032 com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/c034216e-dc48-42b0-b245-95a8140c0753
+[9/22/18 19:57:07:693 CEST] 00000032 com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[9/22/18 19:57:07:694 CEST] 0000001d com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: Application c034216e-dc48-42b0-b245-95a8140c0753 started in 7.489 seconds.
+[9/22/18 19:57:07:967 CEST] 00000029 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at /Users/hassenasse/dev/local/workspace/JavaMicroServiceArquillianCourse/task3-HelloService-persistance/finish/target/liberty/wlp/usr/servers/defaultServer/logs/state/plugin-cfg.xml.
+[9/22/18 19:57:08:045 CEST] 00000033 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [c034216e-dc48-42b0-b245-95a8140c0753] [/c034216e-dc48-42b0-b245-95a8140c0753] [ArquillianServletRunner]: Initialization successful.
+[9/22/18 19:57:08:299 CEST] 00000032 SystemErr                                                    R SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+[9/22/18 19:57:08:300 CEST] 00000032 SystemErr                                                    R SLF4J: Defaulting to no-operation (NOP) logger implementation
+[9/22/18 19:57:08:300 CEST] 00000032 SystemErr                                                    R SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[9/22/18 19:57:09:562 CEST] 00000034 SystemOut                                                    O { "_id" : { "$oid" : "5ba68275746f49b05781257d" }, "greeting" : "salam", "greetingLanguage" : "ar" }
+[9/22/18 19:57:09:577 CEST] 00000034 SystemOut                                                    O { "_id" : { "$oid" : "5ba68275746f49b057812582" }, "greeting" : "hello", "greetingLanguage" : "en" }
+[9/22/18 19:57:09:579 CEST] 00000034 SystemOut                                                    O { "_id" : { "$oid" : "5ba68275746f49b057812584" }, "greeting" : "heji", "greetingLanguage" : "sv" }
+[9/22/18 19:57:09:693 CEST] 00000031 SystemOut                                                    O Greeting{greeting='hello'greetingLanguage='en'}
+[9/22/18 19:57:10:001 CEST] 00000033 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://hassans-mbp.lan:9080/c034216e-dc48-42b0-b245-95a8140c0753/
+[9/22/18 19:57:10:003 CEST] 00000033 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [c034216e-dc48-42b0-b245-95a8140c0753] [/c034216e-dc48-42b0-b245-95a8140c0753] [ArquillianServletRunner]: Destroy successful.
+[9/22/18 19:57:10:024 CEST] 00000033 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application c034216e-dc48-42b0-b245-95a8140c0753 has stopped successfully.
+[9/22/18 19:57:10:042 CEST] 00000038 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at /Users/hassenasse/dev/local/workspace/JavaMicroServiceArquillianCourse/task3-HelloService-persistance/finish/target/liberty/wlp/usr/servers/defaultServer/logs/state/plugin-cfg.xml.
+[9/22/18 19:57:11:727 CEST] 00000031 com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application 9876b03b-e23c-4190-ad2a-87da66d3a9f2.
+[9/22/18 19:57:13:781 CEST] 00000031 com.ibm.ws.microprofile.openapi.ApplicationProcessor         I CWWKO1660I: The application 9876b03b-e23c-4190-ad2a-87da66d3a9f2 was processed and an OpenAPI document was produced.
+[9/22/18 19:57:16:302 CEST] 00000031 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: 9876b03b-e23c-4190-ad2a-87da66d3a9f2.
+[9/22/18 19:57:16:304 CEST] 00000031 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module 9876b03b-e23c-4190-ad2a-87da66d3a9f2 has been bound to default_host.
+[9/22/18 19:57:16:304 CEST] 00000031 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://hassans-mbp.lan:9080/9876b03b-e23c-4190-ad2a-87da66d3a9f2/
+[9/22/18 19:57:16:305 CEST] 00000031 com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: Application 9876b03b-e23c-4190-ad2a-87da66d3a9f2 started in 4.578 seconds.
+[9/22/18 19:57:16:307 CEST] 0000003b com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/9876b03b-e23c-4190-ad2a-87da66d3a9f2
+[9/22/18 19:57:16:309 CEST] 0000003b com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[9/22/18 19:57:16:324 CEST] 00000029 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at /Users/hassenasse/dev/local/workspace/JavaMicroServiceArquillianCourse/task3-HelloService-persistance/finish/target/liberty/wlp/usr/servers/defaultServer/logs/state/plugin-cfg.xml.
+[9/22/18 19:57:16:412 CEST] 00000034 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [9876b03b-e23c-4190-ad2a-87da66d3a9f2] [/9876b03b-e23c-4190-ad2a-87da66d3a9f2] [ArquillianServletRunner]: Initialization successful.
+[9/22/18 19:57:16:577 CEST] 00000038 SystemErr                                                    R SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+[9/22/18 19:57:16:578 CEST] 00000038 SystemErr                                                    R SLF4J: Defaulting to no-operation (NOP) logger implementation
+[9/22/18 19:57:16:578 CEST] 00000038 SystemErr                                                    R SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[9/22/18 19:57:19:157 CEST] 00000040 .jaxrs20.cdi.component.JaxRsFactoryImplicitBeanCDICustomizer W CWWKW1001W: The scope PerRequest of JAXRS-2.0 Resource GreetingResource does not match the CDI scope javax.enterprise.context.ApplicationScoped. Liberty gets resource instance from CDI.
+[9/22/18 19:57:19:260 CEST] 00000040 m.ibm.ws.jaxrs.2.0.common:1.0.22.cl180320180905-2337(id=84)] I Setting the server's publish address to be /rest/
+[9/22/18 19:57:19:492 CEST] 00000040 com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [9876b03b-e23c-4190-ad2a-87da66d3a9f2] [/9876b03b-e23c-4190-ad2a-87da66d3a9f2] [component.arquilliancourse.JaxRsResource]: Initialization successful.
+[9/22/18 19:57:19:577 CEST] 00000040 com.ibm.ws.opentracing.OpentracingUserFeatureAccessService   E CWMOT0008E: OpenTracing cannot track JAX-RS requests because an OpentracingTracerFactory class was not provided.
+[9/22/18 19:57:20:929 CEST] 00000029 SystemOut                                                    O { "_id" : { "$oid" : "5ba6827d746f49b05780d9ad" }, "greeting" : "hello", "greetingLanguage" : "en" }
+[9/22/18 19:57:20:932 CEST] 00000029 SystemOut                                                    O { "_id" : { "$oid" : "5ba6827d746f49b05780d9b2" }, "greeting" : "hej", "greetingLanguage" : "sv" }
+[9/22/18 19:57:20:934 CEST] 00000029 SystemOut                                                    O { "_id" : { "$oid" : "5ba6827d746f49b05780d9b4" }, "greeting" : "salam", "greetingLanguage" : "ar" }
+[9/22/18 19:57:20:976 CEST] 00000031 SystemOut                                                    O { "_id" : { "$oid" : "5ba6827d746f49b05780d9ad" }, "greeting" : "hello", "greetingLanguage" : "en" }
+[9/22/18 19:57:20:978 CEST] 00000031 SystemOut                                                    O { "_id" : { "$oid" : "5ba6827d746f49b05780d9b2" }, "greeting" : "hej", "greetingLanguage" : "sv" }
+[9/22/18 19:57:20:983 CEST] 00000031 SystemOut                                                    O { "_id" : { "$oid" : "5ba6827d746f49b05780d9b4" }, "greeting" : "salam", "greetingLanguage" : "ar" }
+[9/22/18 19:57:21:042 CEST] 00000038 SystemOut                                                    O [
+    {
+        "greeting": "hello",
+        "greetingLanguage": "en"
+    },
+    {
+        "greeting": "hej",
+        "greetingLanguage": "sv"
+    },
+    {
+        "greeting": "salam",
+        "greetingLanguage": "ar"
+    }
+]
+[9/22/18 19:57:21:471 CEST] 0000003f com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://hassans-mbp.lan:9080/9876b03b-e23c-4190-ad2a-87da66d3a9f2/
+[9/22/18 19:57:21:474 CEST] 0000003f com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [9876b03b-e23c-4190-ad2a-87da66d3a9f2] [/9876b03b-e23c-4190-ad2a-87da66d3a9f2] [component.arquilliancourse.JaxRsResource]: Destroy successful.
+[9/22/18 19:57:21:474 CEST] 0000003f com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [9876b03b-e23c-4190-ad2a-87da66d3a9f2] [/9876b03b-e23c-4190-ad2a-87da66d3a9f2] [ArquillianServletRunner]: Destroy successful.
+[9/22/18 19:57:21:488 CEST] 0000003f com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application 9876b03b-e23c-4190-ad2a-87da66d3a9f2 has stopped successfully.
+[9/22/18 19:57:21:511 CEST] 0000003b com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at /Users/hassenasse/dev/local/workspace/JavaMicroServiceArquillianCourse/task3-HelloService-persistance/finish/target/liberty/wlp/usr/servers/defaultServer/logs/state/plugin-cfg.xml.
+[9/22/18 19:57:21:587 CEST] 0000000f com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0085I: The server defaultServer is stopping because the JVM is exiting.
+[9/22/18 19:57:21:589 CEST] 00000044 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  A CWWKE1100I: Waiting for up to 30 seconds for the server to quiesce.
+[9/22/18 19:57:21:592 CEST] 00000045 com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint-ssl has stopped listening for requests on host *  (IPv6) port 9443.
+[9/22/18 19:57:21:595 CEST] 00000045 com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint has stopped listening for requests on host *  (IPv6) port 9080.
+[9/22/18 19:57:21:595 CEST] 00000045 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://hassans-mbp.lan:9080/jwt/
+[9/22/18 19:57:21:595 CEST] 00000045 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://hassans-mbp.lan:9080/openapi/ui/
+[9/22/18 19:57:21:595 CEST] 00000045 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://hassans-mbp.lan:9080/metrics/
+[9/22/18 19:57:21:596 CEST] 00000045 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://hassans-mbp.lan:9080/health/
+[9/22/18 19:57:21:596 CEST] 00000045 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://hassans-mbp.lan:9080/ibm/api/
+[9/22/18 19:57:21:596 CEST] 00000045 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://hassans-mbp.lan:9080/openapi/
+[9/22/18 19:57:21:599 CEST] 00000044 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  I CWWKE1101I: Server quiesce complete.
+[9/22/18 19:57:21:779 CEST] 00000044 com.ibm.ws.security.mp.jwt.impl.MicroProfileJwtConfigImpl    I CWWKS5502I: The MicroProfile JWT configuration [defaultMpJwt] was successfully deactivated.
+[9/22/18 19:57:21:780 CEST] 00000044 com.ibm.ws.security.mp.jwt.impl.MicroProfileJwtServiceImpl   I CWWKS5502I: The MicroProfile JWT configuration [MicroProfileJwtService] was successfully deactivated.
+[9/22/18 19:57:21:823 CEST] 00000044 com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0009I: The security service has stopped.
+[9/22/18 19:57:21:834 CEST] 00000044 ibm.ws.security.authentication.internal.jaas.JAASServiceImpl I CWWKS1124I: The collective authentication plugin with class name NullCollectiveAuthenticationPlugin has been deactivated. 
+[9/22/18 19:57:22:042 CEST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0036I: The server defaultServer stopped after 31.634 seconds.
