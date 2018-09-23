@@ -2,7 +2,6 @@ package component.arquilliancourse.helloservice;
 
 import component.arquilliancourse.datastore.DAO;
 import component.arquilliancourse.datastore.FakeDataStoreConnectionFactory;
-import component.arquilliancourse.helloservice.specializations.GreetingDAOFailingInsertionSpecialization;
 import component.arquilliancourse.helloservice.specializations.GreetingDAOPassingInsertionSpecialization;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
@@ -12,11 +11,11 @@ import org.junit.runner.RunWith;
 
 import javax.inject.Inject;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.*;
 
 
 @RunWith( Arquillian.class )
-public class GreetingServiceFailingInsertionTest extends AbstractTest {
+public class GreetingServicePassingInsertionTest extends AbstractTest {
 
 
     @Deployment
@@ -31,7 +30,7 @@ public class GreetingServiceFailingInsertionTest extends AbstractTest {
                     DAO.class
                 ).addClasses(
                     //Specializations
-                    GreetingDAOFailingInsertionSpecialization.class
+                    GreetingDAOPassingInsertionSpecialization.class
                 ).addClasses(
                     //Data
                     FakeDataStoreConnectionFactory.class
@@ -48,11 +47,11 @@ public class GreetingServiceFailingInsertionTest extends AbstractTest {
     GreetingService greetingService;
 
     @Test
-    public void shouldReturnFalseIfFindByIdReturnsNullAndInsertionFails(){
+    public void shouldReturnTrueIfNoGreetingExistsAndInsertionSucceeded(){
         Greeting dummyGreeting = new Greeting(  );
         boolean res = greetingService.attemptInsertion( dummyGreeting );
         assertThat( res )
-                .isEqualTo( false );
+                .isEqualTo( true );
     }
 
 }
