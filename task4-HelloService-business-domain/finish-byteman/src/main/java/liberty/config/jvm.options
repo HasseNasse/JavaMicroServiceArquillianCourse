@@ -1,0 +1,1 @@
+-Djboss.modules.system.pkgs=com.sun.tools.attach,org.jboss.byteman -Xbootclasspath/a:/Users/hassenasse/dev/local/tools/jdk/zulu8.31.0.1-jdk8.0.181-macosx_x64/lib/tools.jar
