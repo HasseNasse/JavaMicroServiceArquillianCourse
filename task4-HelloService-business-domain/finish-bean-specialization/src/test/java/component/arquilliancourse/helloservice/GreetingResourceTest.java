@@ -53,6 +53,9 @@ public class GreetingResourceTest extends AbstractTest {
                         //Resources
                         GreetingResource.class
                 ).addClasses(
+                        //Services
+                        GreetingService.class
+                ).addClasses(
                         //Data
                         GreetingDAO.class,
                         DAO.class,

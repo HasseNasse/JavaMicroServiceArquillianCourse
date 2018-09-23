@@ -1,15 +1,9 @@
 package component.arquilliancourse.helloservice;
 
-import com.github.fakemongo.Fongo;
-import com.lordofthejars.nosqlunit.annotation.UsingDataSet;
-import com.lordofthejars.nosqlunit.core.LoadStrategyEnum;
 import com.lordofthejars.nosqlunit.mongodb.InMemoryMongoDb;
 import com.lordofthejars.nosqlunit.mongodb.MongoDbRule;
-import com.mongodb.client.MongoCursor;
-import com.mongodb.client.MongoDatabase;
 import component.arquilliancourse.datastore.DAO;
 import component.arquilliancourse.datastore.FakeDataStoreConnectionFactory;
-import org.bson.Document;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.arquillian.junit.InSequence;
@@ -19,11 +13,9 @@ import org.junit.ClassRule;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mockito;
 
 import javax.inject.Inject;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.NoSuchElementException;
@@ -31,8 +23,6 @@ import java.util.NoSuchElementException;
 import static com.lordofthejars.nosqlunit.mongodb.InMemoryMongoDb.InMemoryMongoRuleBuilder.newInMemoryMongoDbRule;
 import static com.lordofthejars.nosqlunit.mongodb.MongoDbRule.MongoDbRuleBuilder.newMongoDbRule;
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.assertj.core.api.Assertions.not;
-import static org.hamcrest.CoreMatchers.equalTo;
 
 @RunWith( Arquillian.class )
 public class GreetingDAOTest extends AbstractTest {

@@ -37,7 +37,7 @@ public class AbstractTest {
                 .addAsLibraries( pomEquippedResolveStage.resolve(nosqlUnit).withTransitivity().asFile() )
                 .addAsLibraries( pomEquippedResolveStage.resolve(slf4j).withTransitivity().asFile() )
                 .addAsLibraries( pomEquippedResolveStage.resolve(assertJ).withTransitivity().asFile() )
-                .addAsWebInfResource( "test-beans.xml", "beans.xml" )
+                .addAsWebInfResource( "test-beans-alternative-dbcon.xml", "beans.xml" )
                 .addAsResource( "microprofile-test-config.properties", "META-INF/microprofile-config.properties" );
     }
 }

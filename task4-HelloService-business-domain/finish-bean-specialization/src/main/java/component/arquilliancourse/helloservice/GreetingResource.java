@@ -6,11 +6,15 @@ import javax.inject.Inject;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Variant;
 import java.util.Arrays;
 
 @Path( "greetings" )
 @ApplicationScoped
 public class GreetingResource {
+
+    @Inject
+    GreetingService greetingService;
 
     @Inject
     GreetingDAO greetingDAO;
@@ -35,7 +39,9 @@ public class GreetingResource {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response addGreeting( Greeting greeting ){
-        return Response.ok(greetingDAO.insert( greeting )).build();
+        if(greetingService.attemptInsertion( greeting ))
+            return Response.ok().build();
+        return Response.status( 403 ).build();
     }
 
 }
