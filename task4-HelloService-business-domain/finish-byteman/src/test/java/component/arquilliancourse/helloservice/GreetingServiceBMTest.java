@@ -34,7 +34,7 @@ public class GreetingServiceBMTest extends AbstractTest {
                         //Model
                         Greeting.class
                 ).addClasses(
-                        //Data
+                        //Extras
                         AbstractTest.class
                 );
     }
@@ -88,19 +88,17 @@ public class GreetingServiceBMTest extends AbstractTest {
                 .isEqualTo( true );
     }
 
-//    @Test
-//    @BMRules(
-//            @BMRule(
-//                    name = "GreetingDAO findbyId finds element in db",
-//                    targetClass = "GreetingDAO",
-//                    targetMethod = "findByID",
-//                    action = "return new Greeting"
-//            )
-//    )
-//    public void shouldReturnFalseIfFindByIdReturnsNonNullValue(){
-//        Greeting dummyGreeting = new Greeting(  );
-//        boolean res = greetingService.attemptInsertion( dummyGreeting );
-//        assertThat( res )
-//                .isEqualTo( false );
-//    }
+    @Test
+    @BMRule(
+            name = "GreetingDAO findbyId finds element in db",
+            targetClass = "GreetingDAO",
+            targetMethod = "findByID",
+            action = "return new component.arquilliancourse.helloservice.Greeting()"
+    )
+    public void shouldReturnFalseIfFindByIdReturnsNonNullValue(){
+        Greeting dummyGreeting = new Greeting(  );
+        boolean res = greetingService.attemptInsertion( dummyGreeting );
+        assertThat( res )
+                .isEqualTo( false );
+    }
 }

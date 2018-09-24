@@ -39,7 +39,7 @@ public class GreetingServiceFailingInsertionTest extends AbstractTest {
                     //Model
                     Greeting.class
                 ).addClasses(
-                    //Data
+                    //Extra
                     AbstractTest.class
                 );
     }

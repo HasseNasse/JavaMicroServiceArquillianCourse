@@ -10,6 +10,10 @@
     <packaging>war</packaging>
 
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+
         <http.port>9080</http.port>
         <https.port>9443</https.port>
 
@@ -21,6 +25,7 @@
         <path.tools_jar>${java.home}/../lib/tools.jar</path.tools_jar>
         <arq.server.jvm.args.debug/>
     </properties>
+
 
     <!--JUnit and Arquillian BOM-->
     <dependencyManagement>
