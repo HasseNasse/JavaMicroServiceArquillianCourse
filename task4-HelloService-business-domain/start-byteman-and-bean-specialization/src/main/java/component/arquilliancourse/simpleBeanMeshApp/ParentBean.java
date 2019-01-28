@@ -1,4 +1,4 @@
-package component.arquilliancourse.simpleBeanMeshApp;
+package component.arquilliancourse.simplebeanmeshapp;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;

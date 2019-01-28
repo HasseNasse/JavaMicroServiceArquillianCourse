@@ -58,7 +58,6 @@
                 <artifactId>liberty-maven-plugin</artifactId>
                 <version>2.2</version>
                 <configuration>
-                    <installAppPackages>all</installAppPackages>
                     <configDirectory>src/main/java/liberty/config</configDirectory>
                     <bootstrapProperties>
                         <app.name>${project.artifactId}</app.name>
@@ -80,6 +79,19 @@
                         <goals>
                             <goal>install-apps</goal>
                         </goals>
+                    </execution>
+                    <execution>
+                        <id>install-feature</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>install-feature</goal>
+                        </goals>
+                        <configuration>
+                            <features>
+                                <acceptLicense>true</acceptLicense>
+                                <feature>javaee-8.0</feature>
+                            </features>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
@@ -224,15 +236,33 @@
 
     <profiles>
         <profile>
-            <id>debug</id>
+            <id>deploy</id>
             <activation>
                 <property>
-                    <name>debug</name>
+                    <name>deploy</name>
                 </property>
             </activation>
-            <properties>
-                <arq.server.jvm.args.debug>-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005</arq.server.jvm.args.debug>
-            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>net.wasdev.wlp.maven.plugins</groupId>
+                        <artifactId>liberty-maven-plugin</artifactId>
+                        <version>2.2</version>
+                        <executions>
+                            <execution>
+                                <phase>package</phase>
+                                <goals>
+                                    <goal>package-server</goal>
+                                </goals>
+                                <configuration>
+                                    <packageFile>${project.build.directory}/${project.artifactId}.jar</packageFile>
+                                    <include>runnable</include>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
     </profiles>
 </project>

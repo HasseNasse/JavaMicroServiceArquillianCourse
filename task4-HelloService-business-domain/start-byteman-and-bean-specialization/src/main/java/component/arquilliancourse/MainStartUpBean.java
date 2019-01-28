@@ -1,6 +1,6 @@
 package component.arquilliancourse;
 
-import component.arquilliancourse.simpleBeanMeshApp.ParentBean;
+import component.arquilliancourse.simplebeanmeshapp.ParentBean;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.Singleton;
